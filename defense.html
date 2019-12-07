@@ -1,0 +1,210 @@
+<style>
+            html,
+            body {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+     
+            .chart-parent--container {
+                display: flex;
+            }
+     
+            .chart--container {
+                height: 120%;
+                width: 120%;
+                min-height: 350px;
+            }
+     
+            .zc-ref {
+                display: none;
+            }
+     
+            zing-grid[loading] {
+                height: 400px;
+            }
+        </style>
+
+<div  class="chart-parent--container">
+                <div id="myChart" class="chart--container" style="height:100%width:100%">
+    
+                </div>
+                <div id="myChart1" class="chart--container" style="height:100%width:100%">
+           
+                </div>
+        </div>
+
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+
+<script>
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+        var myConfig = {
+            type: 'radar',
+"scale": {
+                        "size-factor": 0.8
+                    },
+            title: {
+                text: '49ers (defense) vs. the NFL (2018)'
+            },
+            plot: {
+                aspect: 'area',
+                animation: {
+                    effect: 3,
+                    sequence: 1,
+                    speed: 700
+                }
+            },
+            scaleV: {
+                visible: false
+            },
+            scaleK: {
+                values: '0:5:1',
+                labels: ['Sacks', 'QB Pressure', 'Off. Yards Gained', 'Tackles For Loss', 'Off. Touchdowns Scored', '% of Time Sacked w/ Attempted Pass'],
+                item: {
+                        fontColor: '#607D8B',
+                        backgroundColor: "white",
+                        borderColor: "#aeaeae",
+                        borderWidth: 1,
+                        padding: '5 10',
+                        borderRadius: 10,
+                        fontSize: '6px'
+                    },
+                refLine: {
+                    lineColor: '#c10000'
+                },
+                tick: {
+                    lineColor: '#59869c',
+                    lineWidth: 2,
+                    lineStyle: 'dotted',
+                    size: 20
+                },
+                guide: {
+                    lineColor: "#607D8B",
+                    lineStyle: 'solid',
+                    alpha: 0.3,
+                    backgroundColor: "#c5c5c5 #718eb4"
+                }
+            },
+            series: [{
+                    values: [0.52, 0.532, 0.496, 0.52, 0.5, 0.485],
+                    text: '49ers',
+                    backgroundColor: '#ff0000',
+                    lineColor: "#ff0000",
+                    marker: {
+                        type: "circle",
+                        'background-color': "white",
+                        'border-color': "#ff0000"
+                    }
+                },
+                {
+                    values: [0.48, 0.468, 0.504, 0.48, 0.5, 0.515],
+                    lineColor: '#808080',
+                    backgroundColor: '#808080',
+                    text: 'Overall Average',
+                    marker: {
+                        type: "square",
+                        'background-color': "white",
+                        'border-color': "#808080"
+                    }
+                }
+            ]
+        };
+ 
+        zingchart.render({
+            id: 'myChart',
+            data: myConfig,
+            height: '100%',
+            width: '100%'
+        });
+    </script>
+    <br>
+    <script>
+            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+            var myConfig = {
+                type: 'radar',
+"scale": {
+                        "size-factor": 0.8
+                    },
+                title: {
+                    text: '49ers (defense) vs. the NFL (2019)'
+                },
+                plot: {
+                    aspect: 'area',
+                    animation: {
+                        effect: 3,
+                        sequence: 1,
+                        speed: 700
+                    }
+                },legend: {
+                'draggable': true, //automatically adds header
+    'drag-handler': "icon", //"header" (default) or "icon"
+    'icon': {
+      'line-color': "red"
+    }
+            },
+                scaleV: {
+                    visible: false
+                },
+                scaleK: {
+                    values: '0:5:1',
+                    labels: ['Sacks', 'QB Pressure', 'Off. Yards Gained', 'Tackles For Loss', 'Off. Touchdowns Scored', '% of Time Sacked w/ Attempted Pass'],
+                    item: {
+                        fontColor: '#607D8B',
+                        backgroundColor: "white",
+                        borderColor: "#aeaeae",
+                        borderWidth: 1,
+                        padding: '5 10',
+                        borderRadius: 10,
+                        fontSize: '6px'
+                    },
+                    refLine: {
+                        lineColor: '#c10000'
+                    },
+                    tick: {
+                        lineColor: '#59869c',
+                        lineWidth: 2,
+                        lineStyle: 'dotted',
+                        size: 15
+                    },
+                    guide: {
+                        lineColor: "#607D8B",
+                        lineStyle: 'solid',
+                        alpha: 0.3,
+                        backgroundColor: "#c5c5c5 #718eb4"
+                    }
+                },
+                //values: [45, 0, 1611, 71, 20, 11.3],
+                //values: [31.4, 0, 2836.1, 55.3, 30.8, 7],
+                series: [{
+                        values: [0.589, 0.541, 0.36226, 0.562, 0.3937, 0.6174],
+                        text: '49ers',
+                        backgroundColor: '#ff0000',
+                        lineColor: '#ff0000',
+                        marker: {
+                        type: "circle",
+                        'background-color': "white",
+                        'border-color': "#ff0000"
+                        }
+                    },
+                    {
+                        values: [0.4109, 0.458, 0.6377, 0.437, 0.606, 0.3825],
+                        lineColor: '#808080',
+                        backgroundColor: '#808080',
+                        text: 'Overall Average',
+                        marker: {
+                        type: "circle",
+                        'background-color': "white",
+                        'border-color': "#808080"
+                        }
+                    }
+                ]
+            };
+     
+            zingchart.render({
+                id: 'myChart1',
+                data: myConfig,
+                height: '100%',
+                width: '100%'
+            });
+        </script>
