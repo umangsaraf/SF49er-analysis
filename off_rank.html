@@ -1,0 +1,61 @@
+ <script src="https://code.highcharts.com/highcharts.js"></script>
+<div id='container' style="height:100%;width:100%;"></div>
+    <script>
+       Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: '49ers Offensive Metric Rankings, 2018-2019'
+    },
+   
+    xAxis: {
+        categories: ['Team Offense', 'Passing Offense', 'Rushing Offense', 'Scoring Offense', 'Conversions', 'Drive Averages'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Percentile rank',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ''
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: 0,
+        y: 0,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor:
+            Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+        shadow: true
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: 'Year 2018',
+        data: [34.3, 53, 60, 12.5, 25, 53]
+    }, {
+        name: 'Year 2019',
+        data: [96.8, 50, 96.8, 96.8, 93, 63]
+    }]
+});
+    </script>
